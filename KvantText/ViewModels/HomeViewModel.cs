@@ -57,16 +57,6 @@ namespace KvantText.ViewModels
                 OnPropertyChanged("SelectedStrokes");
             }
         }
-        public bool SelectrionEnabled
-        {
-            get
-            {
-                if (CurrentEditingMode == InkCanvasEditingMode.Select)
-                    return true;
-                else
-                    return false;
-            }
-        }
         public string CommandHistory
         {
             get
@@ -233,6 +223,7 @@ namespace KvantText.ViewModels
         private void ExecuteDeleteButtonClicked(object obj)
         {
             MyStrokes.Remove(SelectedStrokes);
+            StrokesStack.Push(MyStrokes.Clone());
         }
         #endregion
 

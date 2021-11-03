@@ -223,6 +223,7 @@ namespace KvantText.ViewModels
         private void ExecuteDeleteButtonClicked(object obj)
         {
             MyStrokes.Remove(SelectedStrokes);
+            StrokesStack.Push(MyStrokes.Clone());
         }
         #endregion
 

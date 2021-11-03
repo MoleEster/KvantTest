@@ -126,7 +126,7 @@
                        Strokes="{Binding MyStrokes,Mode=TwoWay}"
                        Grid.ColumnSpan="2"
                        EditingMode="{Binding CurrentEditingMode}"
-                      h:InkCanvasExtension.IsSelectionEnabled="{Binding SelectrionEnabled}"
+                      h:InkCanvasExtension.IsSelectionEnabled="True"
                        h:InkCanvasExtension.TheSelectedStrokes="{Binding SelectedStrokes,Mode=TwoWay}">
                 <i:Interaction.Behaviors>
                     <local2:MouseBehaviour MouseX="{Binding PanelX, Mode=OneWayToSource}"

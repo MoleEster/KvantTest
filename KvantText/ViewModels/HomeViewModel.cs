@@ -57,16 +57,6 @@ namespace KvantText.ViewModels
                 OnPropertyChanged("SelectedStrokes");
             }
         }
-        public bool SelectrionEnabled
-        {
-            get
-            {
-                if (CurrentEditingMode == InkCanvasEditingMode.Select)
-                    return true;
-                else
-                    return false;
-            }
-        }
         public string CommandHistory
         {
             get
